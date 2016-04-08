@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="C:\Users\Jaya\AndroidStudioProjects\AwkwardSilence\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.3\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="81d42bf983a8741f4888a6e333e454e4a5e0eeb7">
+        <dex dex="C:\Users\Jaya\AndroidStudioProjects\AwkwardSilence\app\build\intermediates\pre-dexed\debug\classes-a472786cae1e4e0081ad9bb74242a371d865cbf4.jar" />
+    </item>
+    <item
+        jar="C:\Users\Jaya\AndroidStudioProjects\AwkwardSilence\app\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.3\libs\internal_impl-21.0.3.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="01ec05bfbafcc07646ba813000bf2ef11742dd03">
+        <dex dex="C:\Users\Jaya\AndroidStudioProjects\AwkwardSilence\app\build\intermediates\pre-dexed\debug\internal_impl-21.0.3-793f3c24fbfd519d6f6be6d580adbbea032c6bea.jar" />
+    </item>
+    <item
+        jar="C:\Users\Jaya\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\21.0.3\support-annotations-21.0.3.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="4b74cefe1f0c1b819e7260c8627a14674e37fd35">
+        <dex dex="C:\Users\Jaya\AndroidStudioProjects\AwkwardSilence\app\build\intermediates\pre-dexed\debug\support-annotations-21.0.3-62307641643f9e3e7e4bd977beb7f7ab762b5f58.jar" />
+    </item>
+    <item
+        jar="C:\Users\Jaya\AndroidStudioProjects\AwkwardSilence\app\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.3\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="2c91c949a45a21cdecf26e03951e46c7beec9ad8">
+        <dex dex="C:\Users\Jaya\AndroidStudioProjects\AwkwardSilence\app\build\intermediates\pre-dexed\debug\classes-b168ec56ec92041ca6dfc3243d9f17c6fd3c1289.jar" />
+    </item>
+    <item
+        jar="C:\Users\Jaya\.gradle\caches\modules-2\files-2.1\com.google.code.gson\gson\2.2.4\a60a5e993c98c864010053cb901b7eab25306568\gson-2.2.4.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="a60a5e993c98c864010053cb901b7eab25306568">
+        <dex dex="C:\Users\Jaya\AndroidStudioProjects\AwkwardSilence\app\build\intermediates\pre-dexed\debug\gson-2.2.4-c693437befd9dcdcb180a7a876bf052997ef241d.jar" />
+    </item>
+    <item
+        jar="C:\Users\Jaya\AndroidStudioProjects\AwkwardSilence\app\libs\gson-2.4.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="0695b63d702f505b9b916e02272e3b6381bade7f">
+        <dex dex="C:\Users\Jaya\AndroidStudioProjects\AwkwardSilence\app\build\intermediates\pre-dexed\debug\gson-2.4-2efd8cb84e4d8ae54e4f6ced78cc1e3249255b26.jar" />
+    </item>
+
+</items>
