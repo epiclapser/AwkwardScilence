@@ -2,6 +2,7 @@ package com.example.epiclapser.awkwardsilence;
 
 import android.annotation.TargetApi;
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Build;
 import android.support.v7.app.ActionBarActivity;
@@ -22,14 +23,24 @@ import java.util.Set;
 public class MainListPage extends ActionBarActivity {
 Button search;
 Button adder;
+Button advanced;
+    SharedPreferences sharedpreferences;
     EditText editText;
 TextView displayer;
     ArrayList a;
     String selected="";
     String MyPREFERENCES = "MyPrefs";
-    Set<String> set1;
+    Set<String> set1 = new HashSet<String>();;
     String arr[];
     SharedPreferences.Editor editor;
+    @TargetApi(Build.VERSION_CODES.HONEYCOMB)
+    private void LoadPreferences()
+    {
+        sharedpreferences = getPreferences(MODE_PRIVATE);
+        set1 = sharedpreferences.getStringSet("key", set1);
+
+        // Strings variable are ready with the values, you can assign them to other component if you want
+    }
     @TargetApi(Build.VERSION_CODES.HONEYCOMB)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,11 +50,14 @@ TextView displayer;
         displayer =(TextView)findViewById(R.id.textView);
         adder= (Button)findViewById(R.id.button2);
         editText=(EditText)findViewById(R.id.editText);
+        advanced= (Button) findViewById(R.id.advanced);
          a= new ArrayList();
         final String aold[]={"Parkour","Running","VideoGames","Skateboarding","Surfing","TV Shows","Boredom","Humanity","Earthquakes","Physics","Nature","Glasses","Mexican Food","Indian Food"};
-        SharedPreferences sharedpreferences = getSharedPreferences(MyPREFERENCES, Context.MODE_PRIVATE);
+        sharedpreferences = getSharedPreferences(MyPREFERENCES, Context.MODE_PRIVATE);
+        LoadPreferences();
          editor = sharedpreferences.edit();
-         set1 = new HashSet<String>();
+
+
         for(int i = 0; i< aold.length;i++)
         {a.add(aold[i]);}
         set1.addAll(a);
@@ -56,9 +70,13 @@ TextView displayer;
 
             public void onClick(View view) {
              Random rand = new Random();
+                String s ="";
                 int random = rand.nextInt(a.size()-1);
-                arr=set1.toArray(new String[set1.size()]);
+                arr=sharedpreferences.getStringSet("key", set1).toArray(new String[a.size()]);
                 displayer.setText(""+arr[random]);
+                for(int i=0;i<arr.length;i++)
+                    s=s+arr[i];
+                editText.setText(s);
                             }
         });
 
@@ -67,15 +85,23 @@ TextView displayer;
             @Override
 
             public void onClick(View view) {
-                a.add(editText.getText());
-                set1.addAll(a);
+                set1.add(editText.getText() + "");
 
                 editor.putStringSet("key", set1);
+
                 editor.commit();
+                editText.setText("");
             }
         });
 
+        advanced.setOnClickListener(new View.OnClickListener() {
 
+            @Override
+
+            public void onClick(View view) {
+                startActivity(new Intent(MainListPage.this,Enter.class));
+            }
+        });
     }
 
 
@@ -100,4 +126,5 @@ TextView displayer;
 
         return super.onOptionsItemSelected(item);
     }
+
 }
