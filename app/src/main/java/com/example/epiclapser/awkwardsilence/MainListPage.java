@@ -74,9 +74,7 @@ TextView displayer;
                 int random = rand.nextInt(a.size()-1);
                 arr=sharedpreferences.getStringSet("key", set1).toArray(new String[a.size()]);
                 displayer.setText(""+arr[random]);
-                for(int i=0;i<arr.length;i++)
-                    s=s+arr[i];
-                editText.setText(s);
+
                             }
         });
 
